@@ -10,10 +10,10 @@ from gpt4all import GPT4All
 model = GPT4All('Phi-3-mini-4k-instruct.Q4_0.gguf', device='cpu', allow_download=True)
 tokens = []
 with model.chat_session():
-    for token in model.generate("What is the capital of France?", streaming=True):
+    for token in model.generate("What is the capital of Mongolia?", streaming=True):
         tokens.append(token)
     print(tokens)
     # output to console:
-    for token in model.generate("What is the highest mountain in South America?", streaming=True):
+    for token in model.generate("What is the highest mountain in Africa?", streaming=True):
         print(token, end='', flush=True)
     print()
